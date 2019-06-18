@@ -1,0 +1,129 @@
+body{
+	margin: 0;
+	padding: 0;
+	/*background: #607d8b;*/
+	background: #613653;
+	font-family: 'Roboto', sans-serif;
+}
+.text
+{
+	position: absolute;
+	left: calc(50% - 120px);
+	top: calc(50% + 150px);	
+	font-size: 1.5em;
+	color: white;
+	/*text-shadow: 2px 5px 10px black;*/
+}
+
+.text span
+{
+	font-size: 2em;
+	
+}
+.box
+{
+	position: absolute;
+	left: calc(50% - 100px);
+	top: calc(50% - 100px);
+	transform: perspective(1000px)rotateY(50deg);
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+
+	
+
+}
+.box div
+{
+	position: absolute;
+	top :0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	animation:animate 5s linear infinite;
+
+}
+
+.box div span
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg,#f1f1f1,#bbb,#f1f1f1);
+	border-radius: 10px;
+	text-align: center;
+	font-size: 2em;
+}
+
+.box div span:nth-child(1)
+{
+	transform: rotateX(0deg);
+}
+
+.box div span:nth-child(2)
+{
+	transform: rotateX(51deg);
+}
+
+.box div span:nth-child(3)
+{
+	transform: rotateX(102deg);
+}
+
+.box div span:nth-child(4)
+{
+	transform: rotateX(153deg);
+}
+
+.box div span:nth-child(5)
+{
+	transform: rotateX(204deg);
+}
+
+.box div span:nth-child(6)
+{
+	transform: rotateX(255deg);
+}
+
+.box div span:nth-child(7)
+{
+	transform: rotateX(306deg);
+}
+
+/*animation */
+
+
+@keyframes animate
+{
+	0%
+	{
+		transform: perspective(1000px)rotateX(0deg);
+	}
+	100%
+	{
+		transform: perspective(1000px)rotateX(359deg);
+	}
+}
+
+
+/*mobile device*/
+
+@media screen and (max-width:450px)
+{
+	.box{
+		height: 130px;
+		width: 130px;
+		left: calc(50% - 70px);
+		top: calc(50% - 80px);
+	}
+	.text{
+
+		text-align: center;
+		top: calc(50% + 100px);	
+		font-size: 1.3em;
+	}
+} 
